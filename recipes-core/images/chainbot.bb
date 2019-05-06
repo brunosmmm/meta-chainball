@@ -11,6 +11,8 @@ IMAGE_INSTALL = "\
     libsdl-mixer \
     libsdl-image \
     libsdl-ttf \
+    scoreboard \
+    hostapd \
 "
 
 inherit core-image
