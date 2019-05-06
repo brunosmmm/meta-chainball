@@ -2,8 +2,8 @@
 DESCRIPTION = "Pygame"
 HOMEPAGE = "https://github.com/pygame/pygame"
 AUTHOR = "pygame"
-LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENSE.md;md5=beeffd9dfcc746ed5a91921f1acc2746"
+LICENSE = "LGPL"
+LIC_FILES_CHKSUM = "file://docs/LGPL;md5=7fbc338309ac38fefcd64b04bb903e34"
 
 DEPENDS += "\
     ${PYTHON_PN}-setuptools-scm-native \
