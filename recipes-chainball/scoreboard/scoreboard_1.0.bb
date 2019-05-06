@@ -3,7 +3,7 @@ SECTION = "devel/python"
 LICENSE = "MIT"
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-${PV}:"
 LIC_FILES_CHKSUM = "file://LICENSE.md;md5=c4a80bf5871cb89316f07a73eeba7405"
-DEPENDS = "python3-cheroot python3-pyserial python3-bottle python3-dbus"
+DEPENDS = "python3-cheroot python3-pyserial python3-bottle python3-dbus python3-pygame"
 
 SRCREV = "5617b30f7f35ee154a684235fc11062f5e019343"
 SRC_URI = "https://github.com/brunosmmm/chainball-sboard.git"
