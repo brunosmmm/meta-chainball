@@ -7,6 +7,10 @@ IMAGE_INSTALL = "\
     python3 \
     packagegroup-core-boot \
     packagegroup-core-ssh-openssh \
+    libsdl \
+    libsdl-mixer \
+    libsdl-image \
+    libsdl-ttf \
 "
 
 inherit core-image
