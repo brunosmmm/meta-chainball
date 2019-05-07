@@ -7,7 +7,6 @@ LIC_FILES_CHKSUM = "file://docs/LGPL;md5=7fbc338309ac38fefcd64b04bb903e34"
 
 DEPENDS += "\
     ${PYTHON_PN}-setuptools-scm-native \
-    ${PYTHON_PN}-setuptools-scm-git-archive-native \
 "
 
 RDEPENDS_${PN} += " \
