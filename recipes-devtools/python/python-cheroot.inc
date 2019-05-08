@@ -6,6 +6,7 @@ LIC_FILES_CHKSUM = "file://LICENSE.md;md5=beeffd9dfcc746ed5a91921f1acc2746"
 
 DEPENDS += "\
     ${PYTHON_PN}-setuptools-scm-native \
+    ${PYTHON_PN}-setuptools-scm-git-archive-native  \
 "
 
 RDEPENDS_${PN} += " \
