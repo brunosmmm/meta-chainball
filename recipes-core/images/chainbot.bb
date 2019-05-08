@@ -18,6 +18,7 @@ IMAGE_INSTALL = "\
     dnf \
     tzdata-americas \
     sudo \
+    chainbot-admin \
 "
 
 inherit core-image
