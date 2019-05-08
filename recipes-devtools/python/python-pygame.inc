@@ -7,6 +7,10 @@ LIC_FILES_CHKSUM = "file://docs/LGPL;md5=7fbc338309ac38fefcd64b04bb903e34"
 
 DEPENDS += "\
     ${PYTHON_PN}-setuptools-scm-native \
+    libsdl \
+    libsdl-mixer \
+    libsdl-ttf \
+    libsdl-image \
 "
 
 RDEPENDS_${PN} += " \
