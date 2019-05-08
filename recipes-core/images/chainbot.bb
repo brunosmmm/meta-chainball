@@ -19,6 +19,7 @@ IMAGE_INSTALL = "\
     tzdata-americas \
     sudo \
     chainbot-admin \
+    vim \
 "
 
 inherit core-image
