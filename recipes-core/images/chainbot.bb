@@ -17,6 +17,7 @@ IMAGE_INSTALL = "\
     hostapd \
     dnf \
     tzdata-americas \
+    sudo \
 "
 
 inherit core-image
