@@ -20,6 +20,7 @@ IMAGE_INSTALL = "\
     scoreboard \
     hostapd \
     dnf \
+    tzdata-americas \
 "
 
 inherit core-image
