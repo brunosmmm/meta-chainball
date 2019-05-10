@@ -22,7 +22,8 @@ IMAGE_INSTALL = "\
     vim \
 "
 
-IMAGE_FSTYPES = "tar.bz2 ext4 rpi-sdimg"
-COMPATIBLE_MACHINE = "^rpi$"
+IMAGE_CLASSES += "qemuboot"
+IMAGE_FSTYPES = "tar.bz2 ext4"
+COMPATIBLE_MACHINE = "qemuarm"
 
 inherit core-image
