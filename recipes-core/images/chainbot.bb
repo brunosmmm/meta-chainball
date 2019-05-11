@@ -20,6 +20,7 @@ IMAGE_INSTALL = "\
     sudo \
     chainbot-admin \
     vim \
+    curl \
 "
 
 IMAGE_FSTYPES = "tar.bz2 ext4 rpi-sdimg"
