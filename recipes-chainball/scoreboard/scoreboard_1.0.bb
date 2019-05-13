@@ -8,11 +8,11 @@ RDEPENDS_${PN} = "python3-cheroot python3-pyserial python3-bottle python3-dbus p
 # append rpi-gpio if is raspberrypi
 RDEPENDS_${PN}_append_raspberrypi2 = " rpi-gpio"
 
-SRCREV = "8a8790844710864293ae01c601abf238a24e0e96"
+SRCREV = "de5734033b3345dfe1a4cce020105f3d1710dd8b"
 SRC_URI = "git://github.com/brunosmmm/chainball-sboard.git;protocol=https;branch=master"
 
 S = "${WORKDIR}/git"
-PR = "r3"
+PR = "r6"
 
 inherit setuptools3 useradd
 
@@ -29,5 +29,7 @@ export STAGING_LIBDIR
 BBCLASSEXTEND = "native"
 
 do_install_append() {
-                    rm -f ${D}${libdir}/python*/site-packages/site.py*
+  rm -f ${D}${libdir}/python*/site-packages/site.py*
+  install -d ${D}${sysconfdir}/chainball/
+  install -m 755 ${WORKDIR}/git/conf/* ${D}${sysconfdir}/chainball/
 }
