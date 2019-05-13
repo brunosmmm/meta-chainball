@@ -8,11 +8,11 @@ RDEPENDS_${PN} = "python3-cheroot python3-pyserial python3-bottle python3-dbus p
 # append rpi-gpio if is raspberrypi
 RDEPENDS_${PN}_append_raspberrypi2 = " rpi-gpio"
 
-SRCREV = "de5734033b3345dfe1a4cce020105f3d1710dd8b"
+SRCREV = "6e5a7ab4dcebf14e5563bcb94ceb2eb4c602ee58"
 SRC_URI = "git://github.com/brunosmmm/chainball-sboard.git;protocol=https;branch=master"
 
 S = "${WORKDIR}/git"
-PR = "r6"
+PR = "r7"
 
 inherit setuptools3 useradd
 
