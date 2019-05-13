@@ -12,7 +12,7 @@ SRCREV = "6e5a7ab4dcebf14e5563bcb94ceb2eb4c602ee58"
 SRC_URI = "git://github.com/brunosmmm/chainball-sboard.git;protocol=https;branch=master"
 
 S = "${WORKDIR}/git"
-PR = "r7"
+PR = "r8"
 
 inherit setuptools3 useradd
 
@@ -31,5 +31,7 @@ BBCLASSEXTEND = "native"
 do_install_append() {
   rm -f ${D}${libdir}/python*/site-packages/site.py*
   install -d ${D}${sysconfdir}/chainball/
+  install -d ${D}/var/chainball/
+  install -d ${D}/var/chainball/sfx/
   install -m 755 ${WORKDIR}/git/conf/* ${D}${sysconfdir}/chainball/
 }
