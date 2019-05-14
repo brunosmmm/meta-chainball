@@ -8,11 +8,11 @@ RDEPENDS_${PN} = "python3-cheroot python3-pyserial python3-bottle python3-dbus p
 # append rpi-gpio if is raspberrypi
 RDEPENDS_${PN}_append_raspberrypi2 = " rpi-gpio"
 
-SRCREV = "6e5a7ab4dcebf14e5563bcb94ceb2eb4c602ee58"
+SRCREV = "9c6dd06f45d507b073578d57597e94513db967d4"
 SRC_URI = "git://github.com/brunosmmm/chainball-sboard.git;protocol=https;branch=master"
 
 S = "${WORKDIR}/git"
-PR = "r8"
+PR = "r10"
 
 inherit setuptools3 useradd
 
@@ -34,4 +34,13 @@ do_install_append() {
   install -d ${D}/var/chainball/
   install -d ${D}/var/chainball/sfx/
   install -m 755 ${WORKDIR}/git/conf/* ${D}${sysconfdir}/chainball/
+
+  install -d ${D}${systemd_system_unitdir}
+  install -m 0644 ${WORKDIR}/git/misc/scoreboard.service ${D}${systemd_system_unitdir}
 }
+
+SYSTEMD_SERVICE_${PN} = "scoreboard.service"
+SYSTEMD_PACKAGES = "${PN}"
+FILES_${PN} += "/lib/systemd/system"
+
+inherit systemd
