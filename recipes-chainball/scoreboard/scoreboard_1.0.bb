@@ -33,6 +33,7 @@ do_install_append() {
   install -d ${D}${sysconfdir}/chainball/
   install -d ${D}/var/chainball/
   install -d ${D}/var/chainball/sfx/
+  install -d ${D}/var/chainball/persist/
   install -m 755 ${WORKDIR}/git/conf/* ${D}${sysconfdir}/chainball/
 
   install -d ${D}${systemd_system_unitdir}
