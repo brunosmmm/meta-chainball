@@ -21,6 +21,7 @@ IMAGE_INSTALL = "\
     chainbot-admin \
     vim \
     curl \
+    chainball-ddns \
 "
 
 IMAGE_FSTYPES = "tar.bz2 ext4 rpi-sdimg"

@@ -1,0 +1,8 @@
+[Unit]
+Description=Update DuckDNS domain
+
+[Timer]
+OnUnitActiveSec=5m
+
+[Install]
+WantedBy=timers.target

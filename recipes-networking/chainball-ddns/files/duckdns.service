@@ -1,0 +1,13 @@
+[Unit]
+Description=Update DuckDNS domain
+After=Network.target
+
+[Service]
+Type=OneShot
+Environment=DUCKDNS_DOMAIN=
+Environment=DUCKDNS_TOKEN=
+Environment=DUCKDNS_LOG=
+ExecStart=echo url="https://www.duckdns.org/update?domains=${DUCKDNS_DOMAIN}&token=${DUCKDNS_TOKEN}&ip=" | curl -k -o ${DUCKDNS_LOG} -K -
+
+[Install]
+WantedBy=multi-user.target
