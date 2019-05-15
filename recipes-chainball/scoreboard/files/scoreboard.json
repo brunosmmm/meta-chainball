@@ -1,0 +1,5 @@
+{
+    "log_path": "/var/log/scoreboard/scoreboard.log",
+    "chainball_server": "http://www.chainball.online",
+    "chainball_server_token": ""
+}
