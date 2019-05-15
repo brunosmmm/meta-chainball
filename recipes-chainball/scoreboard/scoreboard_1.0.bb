@@ -11,10 +11,11 @@ RDEPENDS_${PN}_append_raspberrypi2 = " rpi-gpio"
 SRCREV = "29d2affb0f43bd914e2be0c43def33823b1b7606"
 SRC_URI = "git://github.com/brunosmmm/chainball-sboard.git;protocol=https;branch=master \
            file://scoreboard.json \
+           file://db.json \
            "
 
 S = "${WORKDIR}/git"
-PR = "r13"
+PR = "r14"
 
 inherit setuptools3 useradd
 
@@ -35,7 +36,6 @@ do_install_append() {
   install -d ${D}${sysconfdir}/chainball/
   install -d ${D}/var/chainball/
   install -d ${D}/var/chainball/sfx/
-  install -d ${D}/var/chainball/persist/
   install -m 755 ${S}/conf/* ${D}${sysconfdir}/chainball/
 
   # overwrite configuration
