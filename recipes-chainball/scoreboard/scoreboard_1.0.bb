@@ -38,6 +38,10 @@ do_install_append() {
 
   install -d ${D}${systemd_system_unitdir}
   install -m 0644 ${WORKDIR}/git/misc/scoreboard.service ${D}${systemd_system_unitdir}
+
+  # install fake database
+  install -d ${D}/usr/lib/chainball/db/
+  echo "[]" > ${D}/usr/lib/chainball/db/registry.json
 }
 
 SYSTEMD_SERVICE_${PN} = "scoreboard.service"
