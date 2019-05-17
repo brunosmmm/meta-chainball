@@ -16,7 +16,7 @@ SRC_URI = "git://github.com/lukas2511/dehydrated.git;protocol=https;branch=maste
            "
 
 S = "${WORKDIR}/git"
-PR = "r4"
+PR = "r5"
 
 do_install() {
   install -d ${D}${bindir}

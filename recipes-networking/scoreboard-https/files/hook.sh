@@ -4,7 +4,7 @@ set -u
 set -o pipefail
 
 domain="chainbot"
-token=__DUCKDNS_TOKEN__
+token="__DUCKDNS_TOKEN__"
 
 case "$1" in
     "deploy_challenge")
