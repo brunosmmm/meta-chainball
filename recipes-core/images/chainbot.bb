@@ -22,6 +22,8 @@ IMAGE_INSTALL = "\
     vim \
     curl \
     chainball-ddns \
+    dnsmasq \
+    scoreboard-network \
 "
 
 IMAGE_FSTYPES = "tar.bz2 ext4 rpi-sdimg"
