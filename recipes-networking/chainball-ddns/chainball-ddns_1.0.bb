@@ -7,8 +7,8 @@ RDEPENDS_${PN} = "curl"
 SRC_URI = "file://duckdns.service \
            file://duckdns.timer \
            "
-LIC_FILES_CHKSUM = "file://duckdns.service;md5=63755a34288268d68af97f3f9f79b185"
-PR = "r5"
+LIC_FILES_CHKSUM = "file://duckdns.service;md5=f63ae66d75c52741540d5c810e220408"
+PR = "r6"
 
 S = "${WORKDIR}"
 
