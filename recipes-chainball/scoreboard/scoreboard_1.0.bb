@@ -16,7 +16,7 @@ SRC_URI = "git://github.com/brunosmmm/chainball-sboard.git;protocol=https;branch
            "
 
 S = "${WORKDIR}/git"
-PR = "r17"
+PR = "r18"
 
 inherit setuptools3 useradd
 
@@ -48,7 +48,9 @@ do_install_append() {
 
   # install fake database
   install -d ${D}/usr/lib/chainball/db/
-  echo "[]" > ${D}/usr/lib/chainball/db/registry.json
+  echo "[]" > ${D}/usr/lib/chainball/db/game_registry.json
+  echo "[]" > ${D}/usr/lib/chainball/db/player_registry.json
+  echo "[]" > ${D}/usr/lib/chainball/db/tournament_registry.json
 }
 
 SYSTEMD_SERVICE_${PN} = "scoreboard.service"
