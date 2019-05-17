@@ -3,12 +3,12 @@ SECTION = "devel/python"
 LICENSE = "MIT"
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-${PV}:${THISDIR}/files:"
 LIC_FILES_CHKSUM = "file://LICENSE.md;md5=c4a80bf5871cb89316f07a73eeba7405"
-RDEPENDS_${PN} = "python3-cheroot python3-pyserial python3-bottle python3-dbus python3-playsound python3-spidev python3-systemd python3-requests python3-beaker"
+RDEPENDS_${PN} = "python3-pyserial python3-dbus python3-playsound python3-spidev python3-systemd python3-requests python3-pyzmq"
 
 # append rpi-gpio if is raspberrypi
 RDEPENDS_${PN}_append_raspberrypi2 = " rpi-gpio"
 
-SRCREV = "540afa6b8cc5044ab5e8ba3ae81d62c5f1aa7578"
+SRCREV = "c13a9b5875c1d97dd9b469708969b3d04a68c5c6"
 SRC_URI = "git://github.com/brunosmmm/chainball-sboard.git;protocol=https;branch=master \
            file://scoreboard.json \
            file://db.json \
@@ -16,7 +16,7 @@ SRC_URI = "git://github.com/brunosmmm/chainball-sboard.git;protocol=https;branch
            "
 
 S = "${WORKDIR}/git"
-PR = "r16"
+PR = "r17"
 
 inherit setuptools3 useradd
 
