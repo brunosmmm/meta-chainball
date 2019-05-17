@@ -1,0 +1,3 @@
+CHALLENGETYPE="dns-01"
+BASEDIR="/etc/dehydrated/"
+HOOK="__HOOK_INSTALL_DIR__/hook.sh"

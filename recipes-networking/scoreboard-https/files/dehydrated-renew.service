@@ -1,0 +1,7 @@
+[Unit]
+Description=Renew SSL certificate
+After=Network.target
+
+[Service]
+Type=simple
+ExecStart=__BINDIR__/dehydrated -c

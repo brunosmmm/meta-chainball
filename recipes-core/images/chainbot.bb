@@ -24,6 +24,7 @@ IMAGE_INSTALL = "\
     chainball-ddns \
     dnsmasq \
     scoreboard-network \
+    scoreboard-https \
 "
 
 IMAGE_FSTYPES = "tar.bz2 ext4 rpi-sdimg"

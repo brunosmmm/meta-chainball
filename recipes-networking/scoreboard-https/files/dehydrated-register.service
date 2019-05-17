@@ -1,0 +1,7 @@
+[Unit]
+Description=Register dehydrated on first boot
+After=Network.target
+
+[Service]
+Type=simple
+ExecStart=__BINDIR__/dehydrated-register.sh
