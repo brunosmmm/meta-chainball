@@ -16,7 +16,7 @@ SRC_URI = "git://github.com/brunosmmm/chainball-sboard.git;protocol=https;branch
            "
 
 S = "${WORKDIR}/git"
-PR = "r15"
+PR = "r16"
 
 inherit setuptools3 useradd
 
@@ -53,6 +53,6 @@ do_install_append() {
 
 SYSTEMD_SERVICE_${PN} = "scoreboard.service"
 SYSTEMD_PACKAGES = "${PN}"
-FILES_${PN} += "/lib/systemd/system"
+FILES_${PN} += "${systemd_system_unitdir}"
 
 inherit systemd
