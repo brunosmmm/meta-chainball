@@ -23,6 +23,7 @@ IMAGE_INSTALL = "\
     curl \
     dnsmasq \
     scoreboard-network \
+    webboard \
 "
 
 IMAGE_FSTYPES = "tar.bz2 ext4 rpi-sdimg"

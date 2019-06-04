@@ -21,6 +21,7 @@ IMAGE_INSTALL = "\
     chainbot-admin \
     vim \
     curl \
+    webboard \
 "
 
 IMAGE_CLASSES += "qemuboot"
