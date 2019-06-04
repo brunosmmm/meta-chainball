@@ -1,6 +1,6 @@
 
 DESCRIPTION = "aiofiles."
-LICENSE = "Apache2.0"
+LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=d2794c0df5b907fdace235a619d80314"
 
 SRC_URI[md5sum] = "cb33cf96c371fbd56fc27ab0bd81bd61"
