@@ -17,7 +17,7 @@ SRC_URI = "git://github.com/brunosmmm/chainball-sboard.git;protocol=https;branch
            "
 
 S = "${WORKDIR}/git"
-PR = "r23"
+PR = "r24"
 
 inherit setuptools3 useradd
 
@@ -55,6 +55,7 @@ do_install_append() {
   echo "[]" > ${D}/usr/lib/chainball/db/tournament_registry.json
 
   chown -R ${SCOREBOARD_USERNAME} ${D}/usr/lib/chainball
+  chown -R ${SCOREBOARD_USERNAME} ${D}${sysconfdir}/chainball
 }
 
 SYSTEMD_SERVICE_${PN} = "scoreboard.service"
