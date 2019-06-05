@@ -4,7 +4,6 @@ LICENSE = "MIT"
 
 IMAGE_FEATURES = " \
 	ssh-server-openssh \
-  debug-tweaks \
   package-management \
 	"
 
