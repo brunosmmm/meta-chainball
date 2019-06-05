@@ -17,7 +17,7 @@ IMAGE_INSTALL = "\
     scoreboard \
     hostapd \
     dnf \
-    tzdata-americas \
+    tzdata \
     sudo \
     chainbot-admin \
     vim \
