@@ -9,7 +9,7 @@ RDEPENDS_${PN} = "python3-pyserial python3-dbus python3-playsound python3-spidev
 RDEPENDS_${PN}_append_raspberrypi2 = " rpi-gpio"
 RDEPENDS_${PN}_append_raspberrypi3 = " rpi-gpio"
 
-SRCREV = "c538ea6512b104b132bd735aba3ac441ddf303c4"
+SRCREV = "d6875f6a12cd697a35237cf5def4f59d15f994e9"
 SRC_URI = "git://github.com/brunosmmm/chainball-sboard.git;protocol=https;branch=master \
            file://scoreboard.json \
            file://db.json \
@@ -17,7 +17,7 @@ SRC_URI = "git://github.com/brunosmmm/chainball-sboard.git;protocol=https;branch
            "
 
 S = "${WORKDIR}/git"
-PR = "r24"
+PR = "r25"
 
 inherit setuptools3 useradd
 
@@ -56,6 +56,7 @@ do_install_append() {
 
   chown -R ${SCOREBOARD_USERNAME} ${D}/usr/lib/chainball
   chown -R ${SCOREBOARD_USERNAME} ${D}${sysconfdir}/chainball
+  chown -R ${SCOREBOARD_USERNAME} ${D}/var/chainball
 }
 
 SYSTEMD_SERVICE_${PN} = "scoreboard.service"
