@@ -17,14 +17,14 @@ SRC_URI = "git://github.com/brunosmmm/chainball-sboard.git;protocol=https;branch
            "
 
 S = "${WORKDIR}/git"
-PR = "r22"
+PR = "r23"
 
 inherit setuptools3 useradd
 
 # add user
 SCOREBOARD_USERNAME = "scoreboard"
 USERADD_PACKAGES = "${PN}"
-USERADD_PARAM_${PN} = "-r -M ${SCOREBOARD_USERNAME}"
+USERADD_PARAM_${PN} = "-r -M -G dialout ${SCOREBOARD_USERNAME}"
 
 export BUILD_SYS
 export HOST_SYS
