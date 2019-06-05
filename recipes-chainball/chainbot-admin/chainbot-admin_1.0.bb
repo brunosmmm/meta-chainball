@@ -2,10 +2,10 @@ SUMMARY = "Setup admin account"
 LICENSE = "MIT"
 
 inherit useradd
-PR = "r2"
+PR = "r6"
 
 ADMIN_USERNAME = "cbadmin"
-ADMIN_PASSWORD = "$1$sShN5NZA$C7WF2YmoHWiJ5ANFmbONv1"
+ADMIN_PASSWORD = "\$6\$V3cdZ/T8crxJIwU\$iEpP5aMO7aESAcbRiUTlj6I6y20yBP00EvS73SzTLTMZaZcwIqkEp9WsqR9vB/QUF/5hoK4hnu1wnYSDA1Man1"
 
 USERADD_PACKAGES = "${PN}"
 GROUPADD_PACKAGES = "${PN}"
