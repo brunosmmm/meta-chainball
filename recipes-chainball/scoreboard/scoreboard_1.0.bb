@@ -17,7 +17,7 @@ SRC_URI = "git://github.com/brunosmmm/chainball-sboard.git;protocol=https;branch
            "
 
 S = "${WORKDIR}/git"
-PR = "r21"
+PR = "r22"
 
 inherit setuptools3 useradd
 
@@ -43,6 +43,7 @@ do_install_append() {
   # overwrite configuration
   install -m 755 ${WORKDIR}/scoreboard.json ${D}${sysconfdir}/chainball/
   install -m 755 ${WORKDIR}/sfx.json ${D}${sysconfdir}/chainball/
+  install -m 755 ${WORKDIR}/db.json ${D}${sysconfdir}/chainball/
 
   install -d ${D}${systemd_system_unitdir}
   install -m 0644 ${S}/misc/scoreboard.service ${D}${systemd_system_unitdir}
