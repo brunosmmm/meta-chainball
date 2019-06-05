@@ -7,8 +7,9 @@ RDEPENDS_${PN} = "python3-pyserial python3-dbus python3-playsound python3-spidev
 
 # append rpi-gpio if is raspberrypi
 RDEPENDS_${PN}_append_raspberrypi2 = " rpi-gpio"
+RDEPENDS_${PN}_append_raspberrypi3 = " rpi-gpio"
 
-SRCREV = "2a335e8391179887308dd2d236792e740b388594"
+SRCREV = "132fa05db856409e790e90b9ede7135f35c1aab9"
 SRC_URI = "git://github.com/brunosmmm/chainball-sboard.git;protocol=https;branch=master \
            file://scoreboard.json \
            file://db.json \
@@ -16,7 +17,7 @@ SRC_URI = "git://github.com/brunosmmm/chainball-sboard.git;protocol=https;branch
            "
 
 S = "${WORKDIR}/git"
-PR = "r19"
+PR = "r20"
 
 inherit setuptools3 useradd
 
@@ -51,6 +52,8 @@ do_install_append() {
   echo "[]" > ${D}/usr/lib/chainball/db/game_registry.json
   echo "[]" > ${D}/usr/lib/chainball/db/player_registry.json
   echo "[]" > ${D}/usr/lib/chainball/db/tournament_registry.json
+
+  chown -R ${SCOREBOARD_USERNAME} ${D}/usr/lib/chainball
 }
 
 SYSTEMD_SERVICE_${PN} = "scoreboard.service"
