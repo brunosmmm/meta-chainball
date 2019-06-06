@@ -1,15 +1,30 @@
 {
-    "sfxpath" : "/var/chainball/sfx",
-    "sfxlib" : {
-        "buzzer" : {
-            "file": "buzzer.wav",
-            "description":  "Buzzer",
-            "builtin": true
-        },
-        "out" : {
-            "file": "out.wav",
-            "description": "Cowout",
-            "builtin": true
-        }
- }
+  "sfxpath": "/var/chainball/sfx",
+  "sfxlib": {
+    "buzzer": {
+      "file": "buzzer.wav",
+      "description": "Buzzer",
+      "builtin": true
+    },
+    "out": {
+      "file": "out.wav",
+      "description": "Cowout",
+      "builtin": true
+    },
+    "court1": {
+      "file": "court1.wav",
+      "description": "Court 1 announcement",
+      "builtin": true
+    },
+    "court2": {
+      "file": "court2.wav",
+      "description": "Court 2 announcement",
+      "builtin": true
+    },
+    "mudskipper": {
+      "file": "mudskipper.wav",
+      "description": "Mudskipper",
+      "builtin": true
+    }
+  }
 }

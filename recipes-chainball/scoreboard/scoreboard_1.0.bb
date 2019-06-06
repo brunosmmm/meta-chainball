@@ -9,7 +9,7 @@ RDEPENDS_${PN} = "python3-pyserial python3-dbus python3-playsound python3-spidev
 RDEPENDS_${PN}_append_raspberrypi2 = " rpi-gpio"
 RDEPENDS_${PN}_append_raspberrypi3 = " rpi-gpio"
 
-SRCREV = "d6875f6a12cd697a35237cf5def4f59d15f994e9"
+SRCREV = "cf5819f55330311d045437c79a514c0961e96bdc"
 SRC_URI = "git://github.com/brunosmmm/chainball-sboard.git;protocol=https;branch=master \
            file://scoreboard.json \
            file://db.json \
@@ -17,7 +17,7 @@ SRC_URI = "git://github.com/brunosmmm/chainball-sboard.git;protocol=https;branch
            "
 
 S = "${WORKDIR}/git"
-PR = "r25"
+PR = "r26"
 
 inherit setuptools3 useradd
 
