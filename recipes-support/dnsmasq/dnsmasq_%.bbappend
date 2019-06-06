@@ -1,3 +1,3 @@
 SUMMARY="dnsmasq configuration"
 
-FILESEXTRAPATHS_prepend = "${THISDIR}/files:"
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
