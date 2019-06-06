@@ -26,10 +26,8 @@ IMAGE_INSTALL = "\
     webboard \
     wpa-supplicant \
     iptables \
-    linux-firmware-bcm43430 \
     bridge-utils \
     ifupdown \
-    ${MACHINE_EXTRA_RRECOMMENDS} \
 "
 
 IMAGE_FSTYPES = "tar.bz2 ext4 rpi-sdimg"
