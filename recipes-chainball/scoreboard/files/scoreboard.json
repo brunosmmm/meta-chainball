@@ -2,5 +2,7 @@
     "log_path": "/var/log/scoreboard/scoreboard.log",
     "chainball_server": "https://www.chainball.online",
     "chainball_server_token": "",
+    "spotify_token": "",
+    "control_spotify": false,
     "live_updates": true
 }
