@@ -2,6 +2,8 @@ SUMMARY = "Chainbot default image."
 
 LICENSE = "MIT"
 
+PR = "r1"
+
 IMAGE_FEATURES = " \
 	ssh-server-openssh \
   package-management \
@@ -28,6 +30,10 @@ IMAGE_INSTALL = "\
     iptables \
     bridge-utils \
     ifupdown \
+"
+
+IMAGE_INSTALL_append_raspberrypi3 = "\
+    ${MACHINE_EXTRA_RRECOMMENDS} \
 "
 
 IMAGE_FSTYPES = "tar.bz2 ext4 rpi-sdimg"
