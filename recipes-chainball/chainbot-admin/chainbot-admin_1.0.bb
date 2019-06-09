@@ -30,18 +30,17 @@ do_install_append() {
     install -m 0644 ${WORKDIR}/cbadmin.service ${D}${systemd_system_unitdir}
 }
 
-pkg_postinst_${PN} () {
+pkg_postinst_ontarget_${PN} () {
 #!/bin/sh -e
 if [ ! -f /home/${ADMIN_USERNAME}/.ssh/cbadmin ]; then
-  mkdir -p /home/${ADMIN_USERNAME}/.ssh
+  install -d /home/${ADMIN_USERNAME}/.ssh
   ssh-keygen -b 4096 -t rsa -f /home/${ADMIN_USERNAME}/.ssh/cbadmin -q -N ""
   chown -R ${ADMIN_USERNAME}:${ADMIN_USERNAME} /home/${ADMIN_USERNAME}/.ssh
   chmod 600 /home/${ADMIN_USERNAME}.ssh/cbadmin
 fi
 }
 
-FILES_${PN} = ""
-FILES_${PN} += " ${systemd_system_unitdir}"
+FILES_${PN} = "${systemd_system_unitdir}"
 # ALLOW_EMPTY_${PN} = "1"
 
 inherit systemd
