@@ -1,0 +1,12 @@
+[Unit]
+Description=Chainbot remote admnistration reverse ssh
+After=network.target
+
+[Service]
+ExecStart=ssh -i /home/cbadmin/.ssh/cbadmin -f -N -T -R 2222:localhost:22 chainbot@www.chainball.online
+Restart=on-failure
+RestartSec=30
+User=cbadmin
+
+[Install]
+WantedBy=multi-user.target
