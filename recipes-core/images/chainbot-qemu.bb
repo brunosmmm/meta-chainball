@@ -13,15 +13,16 @@ IMAGE_INSTALL = "\
     python3 \
     packagegroup-core-boot \
     packagegroup-core-ssh-openssh \
+    packagegroup-core-full-cmdline \
     scoreboard \
-    hostapd \
     dnf \
-    tzdata-americas \
+    tzdata \
     sudo \
     chainbot-admin \
     vim \
     curl \
     webboard \
+    alsa-utils \
 "
 
 IMAGE_CLASSES += "qemuboot"

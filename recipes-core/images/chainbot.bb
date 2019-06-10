@@ -30,6 +30,7 @@ IMAGE_INSTALL = "\
     iptables \
     bridge-utils \
     ifupdown \
+    alsa-utils \
 "
 
 IMAGE_INSTALL_append_raspberrypi3 = "\
