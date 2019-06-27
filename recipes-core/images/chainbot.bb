@@ -31,7 +31,6 @@ IMAGE_INSTALL = "\
     bridge-utils \
     ifupdown \
     alsa-utils \
-    scoreboard-extra \
 "
 
 IMAGE_INSTALL_append_raspberrypi3 = "\
