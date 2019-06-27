@@ -6,10 +6,11 @@ LIC_FILES_CHKSUM = "file://LICENSE.md;md5=c4a80bf5871cb89316f07a73eeba7405"
 RDEPENDS_${PN} = "python3-pyserial python3-dbus python3-playsound python3-spidev python3-systemd python3-requests python3-pyzmq"
 
 # append rpi-gpio if is raspberrypi
-RDEPENDS_${PN}_append_raspberrypi2 = " rpi-gpio"
-RDEPENDS_${PN}_append_raspberrypi3 = " rpi-gpio"
+RDEPENDS_${PN}_append_raspberrypi = " rpi-gpio omxplayer"
+RDEPENDS_${PN}_append_raspberrypi2 = " rpi-gpio omxplayer"
+RDEPENDS_${PN}_append_raspberrypi3 = " rpi-gpio omxplayer"
 
-SRCREV = "51dbbb577080783d0e1b961e0f849f4014dce7af"
+SRCREV = "98fed3ce668fb1e9d13eb80c5b3c5c67d251ae4e"
 SRC_URI = "git://github.com/brunosmmm/chainball-sboard.git;protocol=https;branch=master \
            file://scoreboard.json \
            file://db.json \
@@ -17,7 +18,7 @@ SRC_URI = "git://github.com/brunosmmm/chainball-sboard.git;protocol=https;branch
            "
 
 S = "${WORKDIR}/git"
-PR = "r28"
+PR = "r29"
 
 inherit setuptools3 useradd
 

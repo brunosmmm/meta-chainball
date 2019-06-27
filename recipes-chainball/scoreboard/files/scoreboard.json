@@ -4,5 +4,6 @@
     "chainball_server_token": "",
     "spotify_token": "",
     "control_spotify": false,
-    "live_updates": true
+    "live_updates": true,
+    "use_omx": true
 }
