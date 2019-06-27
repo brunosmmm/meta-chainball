@@ -6,9 +6,9 @@ LIC_FILES_CHKSUM = "file://LICENSE.md;md5=c4a80bf5871cb89316f07a73eeba7405"
 RDEPENDS_${PN} = "python3-pyserial python3-dbus python3-playsound python3-spidev python3-systemd python3-requests python3-pyzmq"
 
 # append rpi-gpio if is raspberrypi
-RDEPENDS_${PN}_append_raspberrypi = " rpi-gpio omxplayer"
-RDEPENDS_${PN}_append_raspberrypi2 = " rpi-gpio omxplayer"
-RDEPENDS_${PN}_append_raspberrypi3 = " rpi-gpio omxplayer"
+RDEPENDS_${PN}_append_raspberrypi = " rpi-gpio omxplayer scoreboard-extra"
+RDEPENDS_${PN}_append_raspberrypi2 = " rpi-gpio omxplayer scoreboard-extra"
+RDEPENDS_${PN}_append_raspberrypi3 = " rpi-gpio omxplayer scoreboard-extra"
 
 SRCREV = "98fed3ce668fb1e9d13eb80c5b3c5c67d251ae4e"
 SRC_URI = "git://github.com/brunosmmm/chainball-sboard.git;protocol=https;branch=master \
@@ -18,14 +18,14 @@ SRC_URI = "git://github.com/brunosmmm/chainball-sboard.git;protocol=https;branch
            "
 
 S = "${WORKDIR}/git"
-PR = "r29"
+PR = "r30"
 
 inherit setuptools3 useradd
 
 # add user
 SCOREBOARD_USERNAME = "scoreboard"
 USERADD_PACKAGES = "${PN}"
-USERADD_PARAM_${PN} = "-r -M -G dialout,audio ${SCOREBOARD_USERNAME}"
+USERADD_PARAM_${PN} = "-r -M -G dialout,audio,video ${SCOREBOARD_USERNAME}"
 
 export BUILD_SYS
 export HOST_SYS
