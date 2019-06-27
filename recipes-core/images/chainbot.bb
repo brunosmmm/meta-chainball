@@ -31,6 +31,9 @@ IMAGE_INSTALL = "\
     bridge-utils \
     ifupdown \
     alsa-utils \
+    mopidy \
+    mopidy-spotify \
+    python-mopidy-iris \
 "
 
 IMAGE_INSTALL_append_raspberrypi3 = "\
