@@ -10,7 +10,7 @@ RDEPENDS_${PN}_append_raspberrypi = " rpi-gpio omxplayer scoreboard-extra"
 RDEPENDS_${PN}_append_raspberrypi2 = " rpi-gpio omxplayer scoreboard-extra"
 RDEPENDS_${PN}_append_raspberrypi3 = " rpi-gpio omxplayer scoreboard-extra"
 
-SRCREV = "98fed3ce668fb1e9d13eb80c5b3c5c67d251ae4e"
+SRCREV = "f37b9689dd3b9b056f21e7dcaefc5806af00fde3"
 SRC_URI = "git://github.com/brunosmmm/chainball-sboard.git;protocol=https;branch=master \
            file://scoreboard.json \
            file://db.json \
@@ -18,7 +18,7 @@ SRC_URI = "git://github.com/brunosmmm/chainball-sboard.git;protocol=https;branch
            "
 
 S = "${WORKDIR}/git"
-PR = "r30"
+PR = "r31"
 
 inherit setuptools3 useradd
 
