@@ -7,6 +7,7 @@ PR = "r26"
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 LIC_FILES_CHKSUM = "file://COPYING;md5=a2e4822a98337283e39f7b60acf85ec9"
 SRC_URI = "file://cbadmin.service \
+           file://authorized_keys \
            file://COPYING \
           "
 
