@@ -2,7 +2,7 @@ SUMMARY = "Setup admin account"
 LICENSE = "MIT"
 
 inherit useradd
-PR = "r25"
+PR = "r26"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 LIC_FILES_CHKSUM = "file://COPYING;md5=a2e4822a98337283e39f7b60acf85ec9"
@@ -28,15 +28,17 @@ SYSTEMD_AUTO_ENABLE_${PN} = "disable"
 do_install_append() {
     install -d ${D}${systemd_system_unitdir}
     install -m 0644 ${WORKDIR}/cbadmin.service ${D}${systemd_system_unitdir}
+    install -d ${D}/home/${ADMIN_USERNAME}/.ssh
+    install -m 600 ${WORKDIR}/authorized_keys ${D}/home/${ADMIN_USERNAME}/.ssh/authorized_keys
 }
 
 pkg_postinst_ontarget_${PN} () {
 #!/bin/sh -e
 if [ ! -f /home/${ADMIN_USERNAME}/.ssh/cbadmin ]; then
-  install -d /home/${ADMIN_USERNAME}/.ssh
   ssh-keygen -b 4096 -t rsa -f /home/${ADMIN_USERNAME}/.ssh/cbadmin -q -N ""
   chown -R ${ADMIN_USERNAME}:${ADMIN_USERNAME} /home/${ADMIN_USERNAME}/.ssh
   chmod 600 /home/${ADMIN_USERNAME}.ssh/cbadmin
+  echo 'export PATH=/sbin:$PATH' >> /home/${ADMIN_USERNAME}/.bashrc
 fi
 }
 
