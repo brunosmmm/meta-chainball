@@ -43,7 +43,7 @@ if [ ! -f /home/${ADMIN_USERNAME}/.ssh/cbadmin ]; then
 fi
 }
 
-FILES_${PN} = "${systemd_system_unitdir}"
+FILES_${PN} = "${systemd_system_unitdir} /home/${ADMIN_USERNAME}"
 # ALLOW_EMPTY_${PN} = "1"
 
 inherit systemd
