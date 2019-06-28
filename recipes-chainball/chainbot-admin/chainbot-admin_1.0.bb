@@ -2,7 +2,7 @@ SUMMARY = "Setup admin account"
 LICENSE = "MIT"
 
 inherit useradd
-PR = "r28"
+PR = "r29"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 LIC_FILES_CHKSUM = "file://COPYING;md5=a2e4822a98337283e39f7b60acf85ec9"
@@ -35,6 +35,7 @@ do_install_append() {
 
 pkg_postinst_ontarget_${PN} () {
 #!/bin/sh -e
+chown -R ${ADMIN_USERNAME}:${ADMIN_USERNAME} /home/${ADMIN_USERNAME}
 if [ ! -f /home/${ADMIN_USERNAME}/.ssh/cbadmin ]; then
   ssh-keygen -b 4096 -t rsa -f /home/${ADMIN_USERNAME}/.ssh/cbadmin -q -N ""
   chown -R ${ADMIN_USERNAME}:${ADMIN_USERNAME} /home/${ADMIN_USERNAME}/.ssh
