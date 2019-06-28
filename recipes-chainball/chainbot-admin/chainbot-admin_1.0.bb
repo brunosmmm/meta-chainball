@@ -2,7 +2,7 @@ SUMMARY = "Setup admin account"
 LICENSE = "MIT"
 
 inherit useradd
-PR = "r27"
+PR = "r28"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 LIC_FILES_CHKSUM = "file://COPYING;md5=a2e4822a98337283e39f7b60acf85ec9"
@@ -17,7 +17,7 @@ ADMIN_PASSWORD = ""
 USERADD_PACKAGES = "${PN}"
 GROUPADD_PACKAGES = "${PN}"
 GROUPADD_PARAM_${PN} = "-r wheel"
-USERADD_PARAM_${PN} = "-d /home/${ADMIN_USERNAME} -r -s /bin/bash -p '$''6''$''V3cdZ/T8crxJIwU''$''iEpP5aMO7aESAcbRiUTlj6I6y20yBP00EvS73SzTLTMZaZcwIqkEp9WsqR9vB/QUF/5hoK4hnu1wnYSDA1Man1' -m -G wheel,dialout,audio ${ADMIN_USERNAME}"
+USERADD_PARAM_${PN} = "-d /home/${ADMIN_USERNAME} -r -s /bin/bash -p '$''6''$''V3cdZ/T8crxJIwU''$''iEpP5aMO7aESAcbRiUTlj6I6y20yBP00EvS73SzTLTMZaZcwIqkEp9WsqR9vB/QUF/5hoK4hnu1wnYSDA1Man1' -m -G wheel,dialout,audio,video ${ADMIN_USERNAME}"
 
 S = "${WORKDIR}"
 RDEPENDS_${PN} = "sudo"
