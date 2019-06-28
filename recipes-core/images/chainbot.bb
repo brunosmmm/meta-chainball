@@ -34,6 +34,8 @@ IMAGE_INSTALL = "\
     mopidy \
     mopidy-spotify \
     python-mopidy-iris \
+    python-pip \
+    python3-pip \
 "
 
 IMAGE_INSTALL_append_raspberrypi3 = "\
