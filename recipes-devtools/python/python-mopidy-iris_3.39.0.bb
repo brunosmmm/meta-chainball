@@ -7,6 +7,14 @@ SRC_URI[sha256sum] = "4fd1df9003a1a81faa21668aa7e18870ba2e241d02d2be2cf9ca9fba9f
 
 PYPI_PACKAGE = "Mopidy-Iris"
 
-RDEPENDS_${PN} = "bash"
+RDEPENDS_${PN} = " \
+                 bash \
+                 python-requests \
+                 python-tornado45 \
+                 python-configobj \
+                 python-mopidy-local-images \
+                 "
+
+PR = "r2"
 
 inherit pypi setuptools

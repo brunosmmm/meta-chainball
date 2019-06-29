@@ -12,6 +12,7 @@ IMAGE_FEATURES = " \
 IMAGE_INSTALL = "\
     kernel-modules \
     python3 \
+    python \
     packagegroup-core-boot \
     packagegroup-core-ssh-openssh \
     packagegroup-core-full-cmdline \
@@ -36,6 +37,7 @@ IMAGE_INSTALL = "\
     python-mopidy-iris \
     python-pip \
     python3-pip \
+    gstreamer1.0-omx \
 "
 
 IMAGE_INSTALL_append_raspberrypi3 = "\

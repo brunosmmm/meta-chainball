@@ -6,4 +6,4 @@ WantedBy=multi-user.target
  
 [Service]
 Type=simple
-ExecStart=/usr/bin/mopidy
+ExecStart=/usr/bin/mopidy --config /etc/mopidy/mopidy.conf
