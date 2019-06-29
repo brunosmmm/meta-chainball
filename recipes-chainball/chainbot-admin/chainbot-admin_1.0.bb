@@ -2,7 +2,7 @@ SUMMARY = "Setup admin account"
 LICENSE = "MIT"
 
 inherit useradd
-PR = "r29"
+PR = "r30"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 LIC_FILES_CHKSUM = "file://COPYING;md5=a2e4822a98337283e39f7b60acf85ec9"

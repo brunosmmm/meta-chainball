@@ -3,6 +3,7 @@ Description=Chainbot remote admnistration reverse ssh
 After=network.target
 
 [Service]
+Type=forking
 ExecStart=ssh -i /home/cbadmin/.ssh/cbadmin -f -N -T -R 2222:localhost:22 chainbot@www.chainball.online
 Restart=on-failure
 RestartSec=30
